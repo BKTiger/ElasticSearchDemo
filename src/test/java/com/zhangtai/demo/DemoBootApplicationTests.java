@@ -524,7 +524,11 @@ public class DemoBootApplicationTests {
 	public void searchMatchAll(){
 		SearchRequest goods = new SearchRequest("goods");
 		MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder("裤子红色","name","colorName");
-
+		// 增加权重
+//		Map<String,Float> fields = new HashMap<>();
+//		fields.put("name",1.0F);
+//		fields.put("colorName",2.0F);
+//		MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder("裤子红色").fields();
 		SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
 		searchSourceBuilder.query(multiMatchQueryBuilder);
 		System.out.println(searchSourceBuilder);
