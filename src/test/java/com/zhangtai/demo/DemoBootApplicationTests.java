@@ -65,7 +65,7 @@ public class DemoBootApplicationTests {
 	@Test
 	public void save() {
 		// 删除索引
-		deleteAll("goods");
+//		deleteAll("goods");
 
 //		Set<String> set = new HashSet<>();
 //		set.add("name");
